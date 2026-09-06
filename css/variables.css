@@ -1,0 +1,299 @@
+/**
+ * Design Tokens — Personal Website of Pablo Barroso González
+ * Single source of truth for colors, spacing, typography, breakpoints, and more.
+ * All values use CSS custom properties for easy theming and maintenance.
+ */
+
+/* ============================================================
+   COLOR PALETTE — Dark-first, Apple/GitHub/Dev aesthetic
+   ============================================================ */
+
+:root {
+  /* --- Base Neutrals (Black + Dark Grays) --- */
+  --color-bg: #050505;           /* Page background — near black */
+  --color-bg-elevated: #0f0f0f;  /* Cards, sections — slightly elevated */
+  --color-bg-hover: #1a1a1a;     /* Hover states */
+  --color-bg-active: #242424;    /* Active/pressed states */
+
+  --color-border: #2a2a2a;       /* Subtle borders, dividers */
+  --color-border-strong: #3a3a3a; /* Stronger borders, focus rings */
+
+  /* --- Text Hierarchy --- */
+  --color-text: #e8e8e8;         /* Primary body text */
+  --color-text-muted: #a0a0a0;   /* Secondary text, metadata */
+  --color-text-subtle: #707070;  /* Tertiary, placeholders, disabled */
+  --color-text-inverse: #050505; /* Text on accent backgrounds */
+
+  /* --- Accent Family (Deep Blue) — Tested in context, adjustable --- */
+  --color-accent: #2d6cdf;           /* Primary accent — links, CTAs, highlights */
+  --color-accent-hover: #4a85e8;     /* Hover state */
+  --color-accent-muted: #1e3a5f;     /* Subtle backgrounds, badges */
+  --color-accent-border: #2d6cdf;    /* Border on accent elements */
+
+  /* --- Semantic Colors (Minimal, Purposeful) --- */
+  --color-success: #2e7d32;          /* Completed, positive states */
+  --color-success-bg: #1b3a1b;
+  --color-warning: #f57c00;          /* In progress, attention */
+  --color-warning-bg: #3a2a0a;
+  --color-error: #c62828;            /* Errors, destructive actions */
+  --color-error-bg: #3a1b1b;
+  --color-info: #0277bd;             /* Informational */
+  --color-info-bg: #0a2a3a;
+
+  /* --- Focus & Accessibility --- */
+  --color-focus: #2d6cdf;            /* Focus ring color */
+  --color-focus-offset: #050505;     /* Focus ring offset (page bg) */
+
+  /* --- Selection --- */
+  --color-selection-bg: #2d6cdf;
+  --color-selection-text: #ffffff;
+}
+
+/* Optional: Light mode via prefers-color-scheme (future-ready) */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: #fafafa;
+    --color-bg-elevated: #ffffff;
+    --color-bg-hover: #f0f0f0;
+    --color-bg-active: #e8e8e8;
+
+    --color-border: #e0e0e0;
+    --color-border-strong: #d0d0d0;
+
+    --color-text: #1a1a1a;
+    --color-text-muted: #5a5a5a;
+    --color-text-subtle: #8a8a8a;
+    --color-text-inverse: #ffffff;
+
+    --color-accent: #1e4d9f;
+    --color-accent-hover: #2d6cdf;
+    --color-accent-muted: #e8f0fe;
+    --color-accent-border: #1e4d9f;
+
+    --color-focus: #1e4d9f;
+    --color-focus-offset: #ffffff;
+
+    --color-selection-bg: #1e4d9f;
+    --color-selection-text: #ffffff;
+  }
+}
+
+/* ============================================================
+   TYPOGRAPHY — System UI + Mono for technical feel
+   ============================================================ */
+
+:root {
+  /* Font Families */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Fira Mono', Menlo, Consolas, monospace;
+
+  /* Fluid Type Scale (clamp: min, preferred, max) */
+  --text-xs: clamp(0.6875rem, 0.65rem + 0.19vw, 0.75rem);      /* 11-12px */
+  --text-sm: clamp(0.8125rem, 0.77rem + 0.21vw, 0.875rem);     /* 13-14px */
+  --text-base: clamp(0.9375rem, 0.88rem + 0.29vw, 1rem);       /* 15-16px */
+  --text-lg: clamp(1.0625rem, 1rem + 0.31vw, 1.125rem);        /* 17-18px */
+  --text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);          /* 20-24px */
+  --text-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 2rem);           /* 24-32px */
+  --text-3xl: clamp(2rem, 1.75rem + 1.25vw, 3rem);             /* 32-48px */
+  --text-4xl: clamp(2.5rem, 2.1rem + 2vw, 4rem);               /* 40-64px */
+
+  /* Line Heights */
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+
+  /* Font Weights */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Letter Spacing */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.02em;
+  --tracking-wider: 0.05em;
+}
+
+/* ============================================================
+   SPACING — 4px Base Scale
+   ============================================================ */
+
+:root {
+  --space-0: 0;
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+
+  /* Semantic Spacing */
+  --space-section: var(--space-16);      /* Between major sections */
+  --space-section-sm: var(--space-12);   /* Between subsections */
+  --space-component: var(--space-8);     /* Between components */
+  --space-element: var(--space-4);       /* Between elements */
+  --space-inline: var(--space-2);        /* Inline gaps */
+}
+
+/* ============================================================
+   BREAKPOINTS — Mobile-First
+   ============================================================ */
+
+:root {
+  --bp-sm: 480px;    /* Small phones */
+  --bp-md: 768px;    /* Tablets */
+  --bp-lg: 1024px;   /* Laptops */
+  --bp-xl: 1280px;   /* Desktops */
+  --bp-2xl: 1536px;  /* Large desktops */
+}
+
+/* Media Query Helpers (used in layout.css) */
+:root {
+  --mq-sm: (min-width: 480px);
+  --mq-md: (min-width: 768px);
+  --mq-lg: (min-width: 1024px);
+  --mq-xl: (min-width: 1280px);
+  --mq-2xl: (min-width: 1536px);
+}
+
+/* ============================================================
+   CONTAINER WIDTHS
+   ============================================================ */
+
+:root {
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1440px;
+  --container-full: 100%;
+  --container-content: 72ch;  /* Optimal reading width */
+}
+
+/* ============================================================
+   BORDER RADIUS
+   ============================================================ */
+
+:root {
+  --radius-none: 0;
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-xl: 1rem;      /* 16px */
+  --radius-full: 9999px;  /* Pills, badges */
+}
+
+/* ============================================================
+   SHADOWS & DEPTH (Subtle, Purposeful)
+   ============================================================ */
+
+:root {
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.2);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.2);
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 3px var(--color-focus);
+}
+
+/* ============================================================
+   TRANSITIONS & ANIMATION
+   ============================================================ */
+
+:root {
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-fast: 120ms;
+  --duration-normal: 200ms;
+  --duration-slow: 350ms;
+
+  --transition-fast: var(--duration-fast) var(--ease-out);
+  --transition-normal: var(--duration-normal) var(--ease-out);
+  --transition-slow: var(--duration-slow) var(--ease-in-out);
+
+  /* Reduced motion */
+  --transition-none: 0s;
+}
+
+/* ============================================================
+   Z-INDEX SCALE
+   ============================================================ */
+
+:root {
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+  --z-toast: 800;
+}
+
+/* ============================================================
+   LAYOUT SPECIFIC
+   ============================================================ */
+
+:root {
+  --header-height: 4.5rem;        /* 72px */
+  --header-height-sm: 4rem;       /* 64px on mobile */
+  --nav-width: 16rem;             /* 256px for future sidebar */
+  --footer-height: auto;
+
+  /* Content max-width */
+  --prose-width: 72ch;
+  --content-padding: var(--space-6);
+  --content-padding-sm: var(--space-4);
+}
+
+/* ============================================================
+   COMPONENT SPECIFIC TOKENS
+   ============================================================ */
+
+:root {
+  /* Buttons */
+  --btn-height: 2.5rem;           /* 40px */
+  --btn-height-sm: 2rem;          /* 32px */
+  --btn-height-lg: 3rem;          /* 48px */
+  --btn-padding-x: var(--space-5);
+  --btn-padding-x-sm: var(--space-4);
+  --btn-padding-x-lg: var(--space-6);
+
+  /* Cards */
+  --card-padding: var(--space-6);
+  --card-padding-sm: var(--space-4);
+
+  /* Badges / Tags */
+  --badge-height: 1.5rem;         /* 24px */
+  --badge-padding-x: var(--space-3);
+
+  /* Form Elements */
+  --input-height: 2.5rem;
+  --input-padding-x: var(--space-4);
+}
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+
+@media print {
+  :root {
+    --color-bg: #ffffff;
+    --color-text: #000000;
+    --color-text-muted: #333333;
+    --color-border: #cccccc;
+  }
+}

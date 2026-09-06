@@ -1,0 +1,494 @@
+/**
+ * Layout — Page structure, sections, responsive grids
+ * Section-specific layouts and responsive behavior
+ */
+
+/* ============================================================
+   PAGE STRUCTURE
+   ============================================================ */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+}
+
+/* ============================================================
+   SECTION BASE
+   ============================================================ */
+
+.section {
+  width: 100%;
+  padding: var(--space-section) 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-12) 0;
+  }
+}
+
+.section-inner {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+}
+
+@media (max-width: 768px) {
+  .section-inner {
+    padding: 0 var(--content-padding-sm);
+  }
+}
+
+/* Section Background Variants */
+.section--elevated {
+  background: var(--color-bg-elevated);
+}
+
+.section--subtle {
+  background: var(--color-bg);
+  position: relative;
+}
+
+.section--subtle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+}
+
+.section--subtle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+}
+
+/* ============================================================
+   ABOUT SECTION
+   ============================================================ */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+  }
+}
+
+.about-image {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-image-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  background: var(--color-bg);
+  color: var(--color-text-subtle);
+}
+
+.about-image-placeholder .icon {
+  width: 4rem;
+  height: 4rem;
+  opacity: 0.3;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.about-text {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text);
+}
+
+.about-text p {
+  margin-bottom: var(--space-4);
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+.about-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.about-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.about-highlight:hover {
+  border-color: var(--color-accent-border);
+  color: var(--color-accent);
+}
+
+.about-highlight .icon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-accent);
+}
+
+/* ============================================================
+   CURRENTLY SECTION
+   ============================================================ */
+
+.currently-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+}
+
+@media (max-width: 480px) {
+  .currently-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.currently-card {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.currently-card:hover {
+  border-color: var(--color-border-strong);
+  transform: translateY(-2px);
+}
+
+.currently-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.currently-card-icon {
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent-muted);
+  border-radius: var(--radius-md);
+  color: var(--color-accent);
+}
+
+.currently-card-icon .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.currently-card-title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.currently-card-description {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* ============================================================
+   PROJECTS SECTION
+   ============================================================ */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Project card uses component styles from components.css */
+
+/* ============================================================
+   LEARNING SECTION
+   ============================================================ */
+
+.learning-section .learning-grid {
+  /* Uses .learning-grid from components.css */
+}
+
+/* ============================================================
+   JOURNEY SECTION
+   ============================================================ */
+
+.journey-section .timeline {
+  /* Uses .timeline from components.css */
+  max-width: var(--container-content);
+  margin: 0 auto;
+}
+
+/* ============================================================
+   CONTACT SECTION
+   ============================================================ */
+
+.contact-section .contact-grid {
+  /* Uses .contact-grid from components.css */
+}
+
+/* ============================================================
+   RESPONSIVE TYPOGRAPHY ADJUSTMENTS
+   ============================================================ */
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+  :root {
+    --header-height: 3.5rem;
+    --space-section: var(--space-10);
+    --space-section-sm: var(--space-8);
+  }
+
+  .section-title {
+    font-size: var(--text-xl);
+  }
+
+  .section-subtitle {
+    font-size: var(--text-base);
+  }
+
+  .hero-name {
+    font-size: var(--text-2xl);
+  }
+
+  .hero-tagline {
+    font-size: var(--text-base);
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 481px) and (max-width: 768px) {
+  :root {
+    --space-section: var(--space-12);
+  }
+}
+
+/* Large desktop adjustments */
+@media (min-width: 1280px) {
+  :root {
+    --space-section: var(--space-20);
+  }
+}
+
+/* ============================================================
+   CONTAINER VARIANTS
+   ============================================================ */
+
+.container-narrow {
+  max-width: var(--container-md);
+}
+
+.container-wide {
+  max-width: var(--container-2xl);
+}
+
+.container-content {
+  max-width: var(--prose-width);
+}
+
+/* ============================================================
+   GRID HELPERS
+   ============================================================ */
+
+.grid-auto-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.grid-auto-fill {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+@media (max-width: 480px) {
+  .grid-auto-fit,
+  .grid-auto-fill {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   ASPECT RATIO HELPERS
+   ============================================================ */
+
+.aspect-square { aspect-ratio: 1 / 1; }
+.aspect-video { aspect-ratio: 16 / 9; }
+.aspect-photo { aspect-ratio: 4 / 3; }
+.aspect-portrait { aspect-ratio: 3 / 4; }
+.aspect-wide { aspect-ratio: 21 / 9; }
+
+/* ============================================================
+   VISUAL SEPARATORS
+   ============================================================ */
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin: var(--space-12) 0;
+  color: var(--color-text-subtle);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* ============================================================
+   FOCUS MANAGEMENT FOR SECTIONS
+   ============================================================ */
+
+.section:target {
+  animation: highlight-section var(--duration-slow) var(--ease-out);
+}
+
+@keyframes highlight-section {
+  0% {
+    background-color: var(--color-accent-muted);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* Only apply to sections with background */
+.section--elevated:target,
+.section--subtle:target {
+  animation: highlight-section-elevated var(--duration-slow) var(--ease-out);
+}
+
+@keyframes highlight-section-elevated {
+  0% {
+    background-color: var(--color-accent-muted);
+  }
+  100% {
+    background-color: var(--color-bg-elevated);
+  }
+}
+
+/* ============================================================
+   PRINT LAYOUT
+   ============================================================ */
+
+@media print {
+  .site-header,
+  .site-footer,
+  .back-to-top,
+  .scroll-indicator,
+  .mobile-menu-btn,
+  .nav-mobile {
+    display: none !important;
+  }
+
+  .page {
+    min-height: auto;
+  }
+
+  .main {
+    display: block;
+  }
+
+  .section {
+    page-break-inside: avoid;
+    padding: var(--space-6) 0;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: var(--space-8) 0;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
