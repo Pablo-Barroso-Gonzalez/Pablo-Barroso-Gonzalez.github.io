@@ -278,6 +278,7 @@
 #learning .learning-grid,
 .learning-section .learning-grid {
   /* Uses .learning-grid from components.css */
+  clear: both;
 }
 
 /* Ensure section header doesn't collapse with grid */
