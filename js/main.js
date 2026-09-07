@@ -28,8 +28,11 @@ function initializeApp() {
   initNavigation();
   initHeaderKeyboardNav();
 
-  // Announce page load for screen readers
-  announce('Página cargada completamente');
+  // Set current year in footer
+  const yearEl = document.getElementById('year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 
   // Initialize scroll animations if not reduced motion
   if (!prefersReducedMotion()) {
@@ -88,38 +91,6 @@ function initFadeInObserver() {
 }
 
 /**
- * Handle theme changes (future-ready)
- */
-function initThemeWatcher() {
-  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
-  const handleChange = (e) => {
-    document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
-  };
-
-  // Initial
-  handleChange(mediaQuery);
-
-  // Listen for changes
-  mediaQuery.addEventListener?.('change', handleChange);
-}
-
-/**
- * Performance: Preload critical resources
- */
-function preloadCriticalResources() {
-  // Preload hero image if exists
-  const heroImage = document.querySelector('.hero img[data-preload]');
-  if (heroImage) {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'image';
-    link.href = heroImage.src;
-    document.head.appendChild(link);
-  }
-}
-
-/**
  * Error handling for development
  */
 function initErrorHandling() {
@@ -134,8 +105,6 @@ function initErrorHandling() {
 
 // Initialize everything
 init();
-initThemeWatcher();
-preloadCriticalResources();
 initErrorHandling();
 
 // Export for potential testing
