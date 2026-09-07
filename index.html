@@ -79,7 +79,7 @@
   </header>
 
   <!-- Mobile Navigation Drawer -->
-  <nav class="nav-mobile" id="mobile-nav" aria-label="Navegación móvil" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <nav class="nav-mobile" id="mobile-nav" aria-label="Navegación móvil">
     <div class="nav-mobile-backdrop" aria-hidden="true"></div>
     <div class="nav-mobile-inner">
       <ul class="nav-mobile-list">
@@ -337,7 +337,7 @@
 
         <div class="projects-grid">
           <!-- Project 1: Monkeytype-Analyzer -->
-          <article class="card project-card link-card" tabindex="0">
+          <article class="card project-card link-card">
             <div class="project-card-image">
               <div class="project-card-placeholder" aria-hidden="true">
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -373,7 +373,7 @@
           </article>
         </div>
 
-        <p style="text-align: center; margin-top: var(--space-8); color: var(--color-text-muted); font-size: var(--text-sm);">
+        <p class="text-center mt-8 text-sm text-muted">
           Más proyectos se irán añadiendo conforme los complete durante 4º ESO. Calidad sobre cantidad.
         </p>
       </div>
@@ -398,15 +398,6 @@
               en mi proyecto Monkeytype-Analyzer. Durante 4º ESO iré aprendiendo librerías según
               las necesite en proyectos reales (pathlib, typing, pytest, etc.) — sin lista fija.
             </p>
-            <div class="learning-item-progress">
-              <div class="learning-item-progress-label">
-                <span>Progreso</span>
-                <span>40%</span>
-              </div>
-              <div class="learning-item-progress-bar">
-                <div class="learning-item-progress-fill" style="width: 40%"></div>
-              </div>
-            </div>
           </article>
 
           <article class="learning-item">
@@ -419,15 +410,6 @@
               sistema de archivos, permisos, systemd (servicios, journalctl), SSH, automatización.
               Profundizando en paralelo durante 4º ESO para ganar soltura real.
             </p>
-            <div class="learning-item-progress">
-              <div class="learning-item-progress-label">
-                <span>Progreso</span>
-                <span>35%</span>
-              </div>
-              <div class="learning-item-progress-bar">
-                <div class="learning-item-progress-fill" style="width: 35%"></div>
-              </div>
-            </div>
           </article>
 
           <article class="learning-item">
@@ -440,15 +422,6 @@
               Práctica con Wireshark/tcpdump para <em>ver</em> tráfico, no solo teoría.
               Base necesaria para entender seguridad de red luego.
             </p>
-            <div class="learning-item-progress">
-              <div class="learning-item-progress-label">
-                <span>Progreso</span>
-                <span>20%</span>
-              </div>
-              <div class="learning-item-progress-bar">
-                <div class="learning-item-progress-fill" style="width: 20%"></div>
-              </div>
-            </div>
           </article>
 
           <article class="learning-item">
@@ -461,15 +434,6 @@
               El inglés es barrera real — lo estoy estudiando (ver verano 2026). Meta: base para
               curso Savitar si se da, pero sin forzarlo si el idioma frena.
             </p>
-            <div class="learning-item-progress">
-              <div class="learning-item-progress-label">
-                <span>Progreso</span>
-                <span>15%</span>
-              </div>
-              <div class="learning-item-progress-bar">
-                <div class="learning-item-progress-fill" style="width: 15%"></div>
-              </div>
-            </div>
           </article>
 
           <article class="learning-item">
@@ -481,15 +445,6 @@
               <strong>Verano 2026:</strong> de cero a uso diario. Commits convencionales, GitHub Actions
               CI/CD, GitHub Pages, Git interno (objetos, refs, packfiles). Lo uso en esta web y proyectos.
             </p>
-            <div class="learning-item-progress">
-              <div class="learning-item-progress-label">
-                <span>Progreso</span>
-                <span>65%</span>
-              </div>
-              <div class="learning-item-progress-bar">
-                <div class="learning-item-progress-fill" style="width: 65%"></div>
-              </div>
-            </div>
           </article>
 
           <article class="learning-item">
@@ -502,15 +457,6 @@
               past simple, vocabulario técnico, listening. Sé que sin inglés me cierro puertas
               en ciberseguridad y desarrollo. Prioridad paralela a lo técnico.
             </p>
-            <div class="learning-item-progress">
-              <div class="learning-item-progress-label">
-                <span>Progreso</span>
-                <span>10%</span>
-              </div>
-              <div class="learning-item-progress-bar">
-                <div class="learning-item-progress-fill" style="width: 10%"></div>
-              </div>
-            </div>
           </article>
         </div>
       </div>
@@ -639,7 +585,7 @@
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <p class="footer-copyright">
-        &copy; 2026 Pablo Barroso González. Construido con HTML, CSS y JS vanilla.
+        &copy; <span id="year"></span> Pablo Barroso González. Construido con HTML, CSS y JS vanilla.
       </p>
       <ul class="footer-links">
         <li><a href="https://github.com/Pablo-Barroso-Gonzalez" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
