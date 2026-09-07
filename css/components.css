@@ -502,6 +502,15 @@
   text-decoration: underline;
 }
 
+/* For span version when whole card is a link */
+.project-card-footer .project-card-link {
+  cursor: default;
+}
+
+.project-card-footer .project-card-link:hover {
+  text-decoration: none;
+}
+
 /* ============================================================
    LEARNING SECTION
    ============================================================ */
