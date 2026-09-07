@@ -170,30 +170,30 @@ Examples:
 
 ---
 
-## 📊 Current Status (V1 In Progress)
+## 📊 Current Status (V1 Complete)
 
 | Area | Status | Notes |
 |------|--------|-------|
 | **Repository Structure** | ✅ Done | Directories created, .gitignore extended |
 | **Public Documentation** | ✅ Done | This README |
-| **Design Tokens (CSS Variables)** | 🔄 In Progress | `css/variables.css` next |
-| **Reset & Base Styles** | ⏳ Pending | `css/reset.css`, `css/base.css` |
-| **Layout & Components** | ⏳ Pending | `css/layout.css`, `css/components.css` |
-| **Home Page HTML** | ⏳ Pending | Semantic sections: Hero, About, Currently, Projects, Learning, Journey, Contact |
-| **Navigation JS** | ⏳ Pending | Sticky header, smooth scroll, mobile menu |
-| **Responsive Verification** | ⏳ Pending | 320px → 1440px+ |
-| **Accessibility Audit** | ⏳ Pending | axe/WAVE, keyboard nav, contrast |
-| **GitHub Pages Deploy** | ⏳ Pending | Verify live deployment |
+| **Design Tokens (CSS Variables)** | ✅ Done | `css/variables.css` — dark-first, light mode via media query |
+| **Reset & Base Styles** | ✅ Done | `css/reset.css`, `css/base.css` — accessibility, utilities |
+| **Layout & Components** | ✅ Done | `css/layout.css`, `css/components.css` — responsive, accessible |
+| **Home Page HTML** | ✅ Done | Semantic sections: Hero, About, Currently, Projects, Learning, Journey, Contact |
+| **Navigation JS** | ✅ Done | Sticky header, smooth scroll, mobile drawer with focus trap |
+| **Responsive Verification** | ✅ Done | 320px → 1440px+ tested |
+| **Accessibility Audit** | ✅ Done | Semantic HTML, focus states, skip link, ARIA, reduced motion |
+| **GitHub Pages Deploy** | ⏳ Pending | Ready for deployment |
 
 ---
 
 ## 🧭 Roadmap
 
-### Phase 1 — Foundation (Current)
+### Phase 1 — Foundation (Complete)
 - [x] Repository structure & documentation
-- [ ] Design system (variables, reset, base)
-- [ ] Home page with all sections
-- [ ] Navigation & responsive layout
+- [x] Design system (variables, reset, base)
+- [x] Home page with all sections
+- [x] Navigation & responsive layout
 - [ ] Deploy verification
 
 ### Phase 2 — Content Depth
