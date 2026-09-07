@@ -39,6 +39,7 @@
   max-width: var(--container-xl);
   margin: 0 auto;
   padding: 0 var(--content-padding);
+  display: flow-root;
 }
 
 @media (max-width: 768px) {
@@ -275,23 +276,9 @@
    LEARNING SECTION
    ============================================================ */
 
-#learning .learning-grid,
 .learning-section .learning-grid {
   /* Uses .learning-grid from components.css */
-  clear: both;
-}
-
-/* Ensure section header doesn't collapse with grid */
-#learning .section-header,
-.learning-section .section-header {
-  display: block;
-  clear: both;
-}
-
-/* Extra safety: ensure learning items don't overlap header */
-#learning .learning-item,
-.learning-section .learning-item {
-  clear: both;
+  margin-top: var(--space-6);
 }
 
 /* ============================================================
