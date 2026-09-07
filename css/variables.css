@@ -176,7 +176,7 @@
   --container-xl: 1280px;
   --container-2xl: 1440px;
   --container-full: 100%;
-  --container-content: 72ch;  /* Optimal reading width */
+  --container-content: 72ch;  /* Optimal reading width (prose) */
 }
 
 /* ============================================================
@@ -202,8 +202,8 @@
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.2);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.2);
 
-  /* Focus ring */
-  --focus-ring: 0 0 0 3px var(--color-focus);
+  /* Focus ring — double ring for contrast in both themes */
+  --focus-ring: 0 0 0 2px var(--color-focus-offset), 0 0 0 4px var(--color-focus);
 }
 
 /* ============================================================
@@ -254,7 +254,6 @@
   --footer-height: auto;
 
   /* Content max-width */
-  --prose-width: 72ch;
   --content-padding: var(--space-6);
   --content-padding-sm: var(--space-4);
 }
