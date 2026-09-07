@@ -39,6 +39,11 @@
 .text-accent { color: var(--color-accent); }
 .text-inverse { color: var(--color-text-inverse); }
 
+/* Text Alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
 /* ============================================================
    CONTAINER & LAYOUT PRIMITIVES
    ============================================================ */
@@ -59,7 +64,7 @@
 .container-sm { max-width: var(--container-sm); }
 .container-md { max-width: var(--container-md); }
 .container-lg { max-width: var(--container-lg); }
-.container-content { max-width: var(--prose-width); }
+.container-content { max-width: var(--container-content); }
 .container-full { max-width: var(--container-full); }
 
 /* ============================================================
@@ -468,38 +473,6 @@
   border-color: var(--color-focus);
 }
 
-/* ============================================================
-   NAVIGATION — Base (enhanced in components.css)
-   ============================================================ */
-
-.nav-link {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-2) var(--space-3);
-  font-size: var(--text-sm);
-  font-weight: var(--font-medium);
-  color: var(--color-text-muted);
-  border-radius: var(--radius-md);
-  transition: color var(--transition-fast), background var(--transition-fast);
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  color: var(--color-text);
-  background: var(--color-bg-hover);
-  text-decoration: none;
-}
-
-.nav-link.active {
-  color: var(--color-accent);
-  background: var(--color-accent-muted);
-}
-
-.nav-link:focus-visible {
-  outline: none;
-  box-shadow: var(--focus-ring);
-}
 
 /* ============================================================
    ICONS — Inline SVG sizing
