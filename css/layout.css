@@ -174,6 +174,13 @@
   color: var(--color-accent);
 }
 
+.about-highlight:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-color: var(--color-accent-border);
+  color: var(--color-accent);
+}
+
 .about-highlight .icon {
   width: 1rem;
   height: 1rem;
@@ -276,9 +283,22 @@
    LEARNING SECTION
    ============================================================ */
 
+#learning .learning-grid,
 .learning-section .learning-grid {
   /* Uses .learning-grid from components.css */
   margin-top: var(--space-6);
+}
+
+/* Ensure section header maintains separation from grid */
+#learning .section-header,
+.learning-section .section-header {
+  /* margin-bottom on .section-header (var(--space-10)) provides separation */
+}
+
+/* Learning items flow naturally in grid — no clear needed */
+#learning .learning-item,
+.learning-section .learning-item {
+  /* Grid handles placement — no clear needed */
 }
 
 /* ============================================================
@@ -368,7 +388,7 @@
 }
 
 .container-content {
-  max-width: var(--prose-width);
+  max-width: var(--container-content);
 }
 
 /* ============================================================
