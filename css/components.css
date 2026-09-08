@@ -668,6 +668,29 @@
   }
 }
 
+/* Contact Social — secondary networks grid */
+.contact-social {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+
+.contact-social-title {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  margin: 0 0 var(--space-4);
+  text-align: center;
+}
+
+/* Reuse social-grid within contact section */
+.contact-social .social-grid {
+  max-width: var(--container-lg);
+  margin: 0 auto;
+}
+
 .contact-item {
   display: flex;
   align-items: flex-start;
@@ -788,7 +811,7 @@
 }
 
 /* ============================================================
-   SOCIAL LINKS — Clean icon grid
+   CONTACT SOCIAL GRID — Secondary networks (reused in contact section)
    ============================================================ */
 
 .social-grid {
