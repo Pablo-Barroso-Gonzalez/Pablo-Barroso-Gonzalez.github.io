@@ -40,6 +40,22 @@
   --color-info: #0277bd;             /* Informational */
   --color-info-bg: #0a2a3a;
 
+  /* --- Social Platform Brand Colors --- */
+  --color-github: #24292e;
+  --color-youtube: #ff0000;
+  --color-instagram: #e4405f;
+  --color-tiktok: #000000;
+  --color-discord: #5865f2;
+  --color-twitch: #9146ff;
+  --color-kick: #53fc18;
+  --color-telegram: #0088cc;
+  --color-facebook: #1877f2;
+  --color-threads: #000000;
+  --color-x: #000000;
+  --color-reddit: #ff4500;
+  --color-snapchat: #fffc00;
+  --color-stackoverflow: #f58025;
+
   /* --- Focus & Accessibility --- */
   --color-focus: #2d6cdf;            /* Focus ring color */
   --color-focus-offset: #050505;     /* Focus ring offset (page bg) */
@@ -72,6 +88,22 @@
 
     --color-focus: #1e4d9f;
     --color-focus-offset: #ffffff;
+
+    /* Social brand colors (same in light mode for brand consistency) */
+    --color-github: #24292e;
+    --color-youtube: #ff0000;
+    --color-instagram: #e4405f;
+    --color-tiktok: #000000;
+    --color-discord: #5865f2;
+    --color-twitch: #9146ff;
+    --color-kick: #53fc18;
+    --color-telegram: #0088cc;
+    --color-facebook: #1877f2;
+    --color-threads: #000000;
+    --color-x: #000000;
+    --color-reddit: #ff4500;
+    --color-snapchat: #ccaa00;       /* Darker yellow for light mode contrast */
+    --color-stackoverflow: #f58025;
 
     --color-selection-bg: #1e4d9f;
     --color-selection-text: #ffffff;
