@@ -894,6 +894,10 @@
   --color-brand: var(--color-instagram);
   --color-brand-hover-bg: color-mix(in srgb, var(--color-instagram) 12%, transparent);
 }
+.social-link[data-platform="whatsapp"] {
+  --color-brand: var(--color-whatsapp);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-whatsapp) 12%, transparent);
+}
 .social-link[data-platform="tiktok"] {
   --color-brand: var(--color-tiktok);
   --color-brand-hover-bg: var(--color-bg-hover);
