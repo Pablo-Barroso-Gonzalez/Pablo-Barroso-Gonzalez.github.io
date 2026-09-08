@@ -828,7 +828,7 @@
 .social-link:hover {
   color: var(--color-brand);
   transform: scale(1.12);
-  background: color-mix(in srgb, var(--color-brand) 10%, transparent);
+  background: var(--color-brand-hover-bg, color-mix(in srgb, var(--color-brand) 10%, transparent));
   border-radius: var(--radius-full);
 }
 
@@ -850,21 +850,71 @@
   transform: scale(1.1);
 }
 
-/* Platform brand color via CSS variable on element */
-.social-link[data-platform="github"] { --color-brand: var(--color-github); }
-.social-link[data-platform="youtube"] { --color-brand: var(--color-youtube); }
-.social-link[data-platform="instagram"] { --color-brand: var(--color-instagram); }
-.social-link[data-platform="tiktok"] { --color-brand: var(--color-tiktok); }
-.social-link[data-platform="discord"] { --color-brand: var(--color-discord); }
-.social-link[data-platform="twitch"] { --color-brand: var(--color-twitch); }
-.social-link[data-platform="kick"] { --color-brand: var(--color-kick); }
-.social-link[data-platform="telegram"] { --color-brand: var(--color-telegram); }
-.social-link[data-platform="facebook"] { --color-brand: var(--color-facebook); }
-.social-link[data-platform="threads"] { --color-brand: var(--color-threads); }
-.social-link[data-platform="x"] { --color-brand: var(--color-x); }
-.social-link[data-platform="reddit"] { --color-brand: var(--color-reddit); }
-.social-link[data-platform="snapchat"] { --color-brand: var(--color-snapchat); }
-.social-link[data-platform="stackoverflow"] { --color-brand: var(--color-stackoverflow); }
+/* Dark brands: icon turns white on hover for visibility on light hover bg */
+.social-link[data-platform="github"]:hover .icon,
+.social-link[data-platform="tiktok"]:hover .icon,
+.social-link[data-platform="threads"]:hover .icon,
+.social-link[data-platform="x"]:hover .icon {
+  color: var(--color-text-inverse);
+}
+
+/* Platform brand colors + hover backgrounds (light brands use tint, dark brands use light bg) */
+.social-link[data-platform="github"] {
+  --color-brand: var(--color-github);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-github) 15%, var(--color-bg-hover));
+}
+.social-link[data-platform="youtube"] {
+  --color-brand: var(--color-youtube);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-youtube) 12%, transparent);
+}
+.social-link[data-platform="instagram"] {
+  --color-brand: var(--color-instagram);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-instagram) 12%, transparent);
+}
+.social-link[data-platform="tiktok"] {
+  --color-brand: var(--color-tiktok);
+  --color-brand-hover-bg: var(--color-bg-hover);
+}
+.social-link[data-platform="discord"] {
+  --color-brand: var(--color-discord);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-discord) 12%, transparent);
+}
+.social-link[data-platform="twitch"] {
+  --color-brand: var(--color-twitch);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-twitch) 12%, transparent);
+}
+.social-link[data-platform="kick"] {
+  --color-brand: var(--color-kick);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-kick) 12%, transparent);
+}
+.social-link[data-platform="telegram"] {
+  --color-brand: var(--color-telegram);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-telegram) 12%, transparent);
+}
+.social-link[data-platform="facebook"] {
+  --color-brand: var(--color-facebook);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-facebook) 12%, transparent);
+}
+.social-link[data-platform="threads"] {
+  --color-brand: var(--color-threads);
+  --color-brand-hover-bg: var(--color-bg-hover);
+}
+.social-link[data-platform="x"] {
+  --color-brand: var(--color-x);
+  --color-brand-hover-bg: var(--color-bg-hover);
+}
+.social-link[data-platform="reddit"] {
+  --color-brand: var(--color-reddit);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-reddit) 12%, transparent);
+}
+.social-link[data-platform="snapchat"] {
+  --color-brand: var(--color-snapchat);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-snapchat) 12%, transparent);
+}
+.social-link[data-platform="stackoverflow"] {
+  --color-brand: var(--color-stackoverflow);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-stackoverflow) 12%, transparent);
+}
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
