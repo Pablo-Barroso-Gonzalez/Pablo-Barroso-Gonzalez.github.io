@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Section Test</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <style>
+    /* Debug styles to visualize layout issues */
+    .debug .section-header { outline: 2px solid red; }
+    .debug .learning-grid { outline: 2px solid blue; }
+    .debug .learning-item { outline: 1px solid green; }
+    .debug .learning-item-header { outline: 1px solid orange; }
+    .debug .learning-item-title { outline: 1px solid purple; }
+    .debug .learning-item-status { outline: 1px solid cyan; }
+  </style>
+</head>
+<body>
+  <main class="main" role="main">
+    <!-- LEARNING SECTION - Isolated for testing -->
+    <section id="learning" class="section" aria-labelledby="learning-title">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2 id="learning-title" class="section-title">Learning</h2>
+          <p class="section-subtitle">Áreas que estoy explorando activamente — sin porcentajes inventados</p>
+        </header>
+
+        <div class="learning-grid">
+          <article class="learning-item">
+            <header class="learning-item-header">
+              <h3 class="learning-item-title">Python Avanzado</h3>
+              <span class="badge badge-building learning-item-status">Building</span>
+            </header>
+            <p class="learning-item-description">
+              Tipado estático (mypy/pyright), patrones de diseño, concurrencia (asyncio, threading),
+              testing (pytest, hypothesis), performance profiling, packaging moderno.
+            </p>
+            <div class="learning-item-progress">
+              <div class="learning-item-progress-label">
+                <span>Progreso</span>
+                <span>65%</span>
+              </div>
+              <div class="learning-item-progress-bar">
+                <div class="learning-item-progress-fill" style="width: 65%"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="learning-item">
+            <header class="learning-item-header">
+              <h3 class="learning-item-title">Linux Administration</h3>
+              <span class="badge badge-learning learning-item-status">Learning</span>
+            </header>
+            <p class="learning-item-description">
+              Sistema de archivos, permisos, systemd, gestión de paquetes (apt/dnf/pacman),
+              logs (journalctl), usuarios/grupos, SSH hardening, automatización con bash.
+            </p>
+            <div class="learning-item-progress">
+              <div class="learning-item-progress-label">
+                <span>Progreso</span>
+                <span>40%</span>
+              </div>
+              <div class="learning-item-progress-bar">
+                <div class="learning-item-progress-fill" style="width: 40%"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="learning-item">
+            <header class="learning-item-header">
+              <h3 class="learning-item-title">Networking Fundamentals</h3>
+              <span class="badge badge-exploring learning-item-status">Exploring</span>
+            </header>
+            <p class="learning-item-description">
+              Modelo OSI/TCP-IP en profundidad, subnetting, routing, DNS, DHCP, HTTP/2/3,
+              TLS/SSL, VPNs (WireGuard), análisis de paquetes (Wireshark, tcpdump).
+            </p>
+            <div class="learning-item-progress">
+              <div class="learning-item-progress-label">
+                <span>Progreso</span>
+                <span>30%</span>
+              </div>
+              <div class="learning-item-progress-bar">
+                <div class="learning-item-progress-fill" style="width: 30%"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="learning-item">
+            <header class="learning-item-header">
+              <h3 class="learning-item-title">Cybersecurity Basics</h3>
+              <span class="badge badge-learning learning-item-status">Learning</span>
+            </header>
+            <p class="learning-item-description">
+              Reconocimiento pasivo/activo, enumeración de servicios, vulnerabilidades web (OWASP Top 10),
+              explotación básica, escalada de privilegios, persistencia. Labs: TryHackMe, Hack The Box.
+            </p>
+            <div class="learning-item-progress">
+              <div class="learning-item-progress-label">
+                <span>Progreso</span>
+                <span>25%</span>
+              </div>
+              <div class="learning-item-progress-bar">
+                <div class="learning-item-progress-fill" style="width: 25%"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="learning-item">
+            <header class="learning-item-header">
+              <h3 class="learning-item-title">Git &amp; GitHub Workflow</h3>
+              <span class="badge badge-deepening learning-item-status">Deepening</span>
+            </header>
+            <p class="learning-item-description">
+              Git interno (objetos, refs, packfiles), flujos de trabajo (GitFlow, trunk-based),
+              GitHub Actions CI/CD, conventional commits, code review, GitHub Pages deployment.
+            </p>
+            <div class="learning-item-progress">
+              <div class="learning-item-progress-label">
+                <span>Progreso</span>
+                <span>70%</span>
+              </div>
+              <div class="learning-item-progress-bar">
+                <div class="learning-item-progress-fill" style="width: 70%"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="learning-item">
+            <header class="learning-item-header">
+              <h3 class="learning-item-title">Computer Science Fundamentals</h3>
+              <span class="badge badge-learning learning-item-status">Learning</span>
+            </header>
+            <p class="learning-item-description">
+              Estructuras de datos, algoritmos, complejidad Big-O, sistemas operativos (procesos,
+              memoria, scheduling), arquitectura de computadoras, bases de datos relacionales.
+            </p>
+            <div class="learning-item-progress">
+              <div class="learning-item-progress-label">
+                <span>Progreso</span>
+                <span>35%</span>
+              </div>
+              <div class="learning-item-progress-bar">
+                <div class="learning-item-progress-fill" style="width: 35%"></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Toggle debug outlines
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'd') {
+        document.body.classList.toggle('debug');
+      }
+    });
+
+    // Log viewport info
+    function logViewport() {
+      console.log('Viewport:', window.innerWidth, 'x', window.innerHeight);
+      console.log('Grid computed columns:', getComputedStyle(document.querySelector('.learning-grid')).gridTemplateColumns);
+    }
+    window.addEventListener('resize', logViewport);
+    logViewport();
+  </script>
+</body>
+</html>

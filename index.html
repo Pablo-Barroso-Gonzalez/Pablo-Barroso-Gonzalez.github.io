@@ -35,6 +35,11 @@
   <title>Pablo Barroso González</title>
 </head>
 <body>
+  <!-- SVG Sprite (social icons) -->
+  <svg aria-hidden="true" style="position: absolute; width: 0; height: 0;">
+    <use href="/assets/icons/social-sprite.svg#icon-github"></use>
+  </svg>
+
   <!-- Skip Link -->
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
 
@@ -112,24 +117,16 @@
 
         <nav class="hero-links" aria-label="Enlaces de perfil">
           <a href="https://github.com/Pablo-Barroso-Gonzalez" class="hero-link" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.305-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
-            </svg>
+            <svg class="icon" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-github"></use></svg>
             GitHub
           </a>
           <a href="https://www.youtube.com/@UltraTech82" class="hero-link" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="currentColor"/>
-              <path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#fff"/>
-            </svg>
+            <svg class="icon" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-youtube"></use></svg>
             YouTube
           </a>
-          <a href="mailto:pablo.barroso.gonzalez@email.com" class="hero-link">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            Email
+          <a href="https://www.instagram.com/" class="hero-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg class="icon" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-instagram"></use></svg>
+            Instagram
           </a>
         </nav>
       </div>
@@ -363,9 +360,7 @@
               </p>
               <footer class="project-card-footer">
                 <span class="project-card-link" aria-hidden="true">
-                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.305-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
-                  </svg>
+                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z"/></svg>
                   Ver en GitHub
                 </span>
               </footer>
@@ -538,25 +533,11 @@
           <p class="section-subtitle">¿Colaboración, pregunta técnica o solo saludar?</p>
         </header>
 
+        <!-- Primary contact channels -->
         <div class="contact-grid">
-          <a href="mailto:pablo.barroso.gonzalez@email.com" class="contact-item">
-            <div class="contact-icon">
-              <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-            </div>
-            <div class="contact-content">
-              <span class="contact-label">Email</span>
-              <span class="contact-value">pablo.barroso.gonzalez@email.com</span>
-            </div>
-          </a>
-
           <a href="https://github.com/Pablo-Barroso-Gonzalez" class="contact-item" target="_blank" rel="noopener noreferrer">
             <div class="contact-icon">
-              <svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.305-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
-              </svg>
+              <svg class="icon icon-lg" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-github"></use></svg>
             </div>
             <div class="contact-content">
               <span class="contact-label">GitHub</span>
@@ -566,16 +547,96 @@
 
           <a href="https://www.youtube.com/@UltraTech82" class="contact-item" target="_blank" rel="noopener noreferrer">
             <div class="contact-icon">
-              <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="currentColor"/>
-                <path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#fff"/>
-              </svg>
+              <svg class="icon icon-lg" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-youtube"></use></svg>
             </div>
             <div class="contact-content">
               <span class="contact-label">YouTube</span>
               <span class="contact-value">@UltraTech82</span>
             </div>
           </a>
+
+          <a href="https://www.instagram.com/ultratech.kernel/" class="contact-item" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <div class="contact-icon">
+              <svg class="icon icon-lg" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-instagram"></use></svg>
+            </div>
+            <div class="contact-content">
+              <span class="contact-label">Instagram</span>
+              <span class="contact-value">@ultratech.kernel</span>
+            </div>
+          </a>
+
+          <a href="mailto:pablo.barroso@proton.me" class="contact-item">
+            <div class="contact-icon">
+              <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div class="contact-content">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">pablo.barroso@proton.me</span>
+            </div>
+          </a>
+
+          <a href="https://wa.me/ultratech.kernel" class="contact-item" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <div class="contact-icon">
+              <svg class="icon icon-lg" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-whatsapp"></use></svg>
+            </div>
+            <div class="contact-content">
+              <span class="contact-label">WhatsApp</span>
+              <span class="contact-value">ultratech.kernel</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Secondary social networks -->
+        <div class="contact-social">
+          <h3 class="contact-social-title">Encuéntrame también en:</h3>
+          <div class="social-grid">
+            <a href="https://www.tiktok.com/@pablo25586" class="social-link" data-platform="tiktok" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <svg class="icon" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-tiktok"></use></svg>
+            </a>
+
+            <a class="social-link" data-platform="discord" aria-label="Discord (próximamente)" aria-disabled="true" tabindex="-1">
+              <svg class="icon" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-discord"></use></svg>
+            </a>
+
+            <a href="https://www.twitch.tv/ultratech_code" class="social-link" data-platform="twitch" target="_blank" rel="noopener noreferrer" aria-label="Twitch">
+              <svg class="icon" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-twitch"></use></svg>
+            </a>
+
+            <a href="https://kick.com/pablo-barroso" class="social-link" data-platform="kick" target="_blank" rel="noopener noreferrer" aria-label="Kick">
+              <svg class="icon" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-kick"></use></svg>
+            </a>
+
+            <a href="https://t.me/UltraTech_Code" class="social-link" data-platform="telegram" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+              <svg class="icon" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-telegram"></use></svg>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61572372460908" class="social-link" data-platform="facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg class="icon" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-facebook"></use></svg>
+            </a>
+
+            <a href="https://www.threads.com/@ultratech.kernel" class="social-link" data-platform="threads" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+              <svg class="icon" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-threads"></use></svg>
+            </a>
+
+            <a href="https://x.com/Pablo_BarrosoUT" class="social-link" data-platform="x" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+              <svg class="icon" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-x"></use></svg>
+            </a>
+
+            <a href="https://www.reddit.com/user/Pablo_Barroso/" class="social-link" data-platform="reddit" target="_blank" rel="noopener noreferrer" aria-label="Reddit">
+              <svg class="icon" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-reddit"></use></svg>
+            </a>
+
+            <a href="https://www.snapchat.com/add/ultratechcode" class="social-link" data-platform="snapchat" target="_blank" rel="noopener noreferrer" aria-label="Snapchat">
+              <svg class="icon" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-snapchat"></use></svg>
+            </a>
+
+            <a href="https://stackoverflow.com/users/32938599/pablo-barroso-gonz%c3%a1lez" class="social-link" data-platform="stackoverflow" target="_blank" rel="noopener noreferrer" aria-label="Stack Overflow">
+              <svg class="icon" aria-hidden="true"><use href="/assets/icons/social-sprite.svg#icon-stackoverflow"></use></svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -590,7 +651,7 @@
       <ul class="footer-links">
         <li><a href="https://github.com/Pablo-Barroso-Gonzalez" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
         <li><a href="https://www.youtube.com/@UltraTech82" class="footer-link" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-        <li><a href="mailto:pablo.barroso.gonzalez@email.com" class="footer-link">Email</a></li>
+        <li><a href="https://www.instagram.com/ultratech.kernel/" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
       </ul>
     </div>
   </footer>

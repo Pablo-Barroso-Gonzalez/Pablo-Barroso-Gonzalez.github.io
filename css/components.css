@@ -668,6 +668,29 @@
   }
 }
 
+/* Contact Social — secondary networks grid */
+.contact-social {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+
+.contact-social-title {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  margin: 0 0 var(--space-4);
+  text-align: center;
+}
+
+/* Reuse social-grid within contact section */
+.contact-social .social-grid {
+  max-width: var(--container-lg);
+  margin: 0 auto;
+}
+
 .contact-item {
   display: flex;
   align-items: flex-start;
@@ -785,6 +808,151 @@
 .footer-link:hover {
   color: var(--color-accent);
   text-decoration: underline;
+}
+
+/* ============================================================
+   CONTACT SOCIAL GRID — Secondary networks (reused in contact section)
+   ============================================================ */
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(52px, 1fr));
+  gap: var(--space-2);
+  max-width: var(--container-md);
+  margin: 0 auto;
+  justify-items: center;
+}
+
+@media (min-width: 640px) {
+  .social-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .social-grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: transparent;
+  text-decoration: none;
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast), transform var(--transition-fast), background var(--transition-fast);
+}
+
+.social-link:hover {
+  color: var(--color-brand);
+  transform: scale(1.12);
+  background: var(--color-brand-hover-bg, color-mix(in srgb, var(--color-brand) 10%, transparent));
+  border-radius: var(--radius-full);
+}
+
+.social-link:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  transform: scale(1.12);
+}
+
+.social-link .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.social-link:hover .icon {
+  color: var(--color-brand);
+  transform: scale(1.1);
+}
+
+/* Dark brands: icon turns white on hover for visibility on light hover bg */
+.social-link[data-platform="github"]:hover .icon,
+.social-link[data-platform="tiktok"]:hover .icon,
+.social-link[data-platform="threads"]:hover .icon,
+.social-link[data-platform="x"]:hover .icon {
+  color: var(--color-text-inverse);
+}
+
+/* Platform brand colors + hover backgrounds (light brands use tint, dark brands use light bg) */
+.social-link[data-platform="github"] {
+  --color-brand: var(--color-github);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-github) 15%, var(--color-bg-hover));
+}
+.social-link[data-platform="youtube"] {
+  --color-brand: var(--color-youtube);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-youtube) 12%, transparent);
+}
+.social-link[data-platform="instagram"] {
+  --color-brand: var(--color-instagram);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-instagram) 12%, transparent);
+}
+.social-link[data-platform="whatsapp"] {
+  --color-brand: var(--color-whatsapp);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-whatsapp) 12%, transparent);
+}
+.social-link[data-platform="tiktok"] {
+  --color-brand: var(--color-tiktok);
+  --color-brand-hover-bg: var(--color-bg-hover);
+}
+.social-link[data-platform="discord"] {
+  --color-brand: var(--color-discord);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-discord) 12%, transparent);
+}
+.social-link[data-platform="twitch"] {
+  --color-brand: var(--color-twitch);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-twitch) 12%, transparent);
+}
+.social-link[data-platform="kick"] {
+  --color-brand: var(--color-kick);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-kick) 12%, transparent);
+}
+.social-link[data-platform="telegram"] {
+  --color-brand: var(--color-telegram);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-telegram) 12%, transparent);
+}
+.social-link[data-platform="facebook"] {
+  --color-brand: var(--color-facebook);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-facebook) 12%, transparent);
+}
+.social-link[data-platform="threads"] {
+  --color-brand: var(--color-threads);
+  --color-brand-hover-bg: var(--color-bg-hover);
+}
+.social-link[data-platform="x"] {
+  --color-brand: var(--color-x);
+  --color-brand-hover-bg: var(--color-bg-hover);
+}
+.social-link[data-platform="reddit"] {
+  --color-brand: var(--color-reddit);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-reddit) 12%, transparent);
+}
+.social-link[data-platform="snapchat"] {
+  --color-brand: var(--color-snapchat);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-snapchat) 12%, transparent);
+}
+.social-link[data-platform="stackoverflow"] {
+  --color-brand: var(--color-stackoverflow);
+  --color-brand-hover-bg: color-mix(in srgb, var(--color-stackoverflow) 12%, transparent);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .social-link,
+  .social-link .icon {
+    transition: none;
+  }
+  .social-link:hover,
+  .social-link:focus-visible {
+    transform: none;
+  }
 }
 
 /* ============================================================
